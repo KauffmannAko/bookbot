@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from stats import get_word_count, get_a_character_count, report_stats
 import sys
 
@@ -19,8 +20,8 @@ def get_book_text(filepath):
         print(f"File not found: {filepath}")
         sys.exit(1)
 
-if len(sys.argv) < 2 :
-    print("Usage: python3 main.py <path_to_book>")
+if len(sys.argv) < 3 :
+    print("Usage: python3 main.py <path_to_book> <chars>")
     sys.exit(1)
 else:
-    main(sys.argv[1],'et')
+    main(sys.argv[1], sys.argv[2])
